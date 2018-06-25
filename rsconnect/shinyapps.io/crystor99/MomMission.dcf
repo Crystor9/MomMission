@@ -5,8 +5,9 @@ account: crystor99
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 366579
-bundleId: 1446754
+bundleId: 1446847
 url: https://crystor99.shinyapps.io/MomMission/
-when: 1529909550.09193
+when: 1529913505.91803
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: .Rapp.history|.RData|README.md

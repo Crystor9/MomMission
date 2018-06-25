@@ -1,0 +1,39 @@
+---
+title: "燃气运行复习"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(kableExtra)
+library(dplyr)
+source("ui.R")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 多选
+
+
+```{r multiple, echo=FALSE}
+data %>% kable("html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "responsive"),
+                full_width = F, position = "center")
+```
+
+## 单选
+
+
+```{r single, echo=FALSE}
+data2 %>% kable("html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "responsive"),
+                full_width = F, position = "center")
+```
+
+##判断
+
+```{r, echo=FALSE}
+data3 %>% kable("html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "responsive"),
+                full_width = F, position = "center")
+```
+
