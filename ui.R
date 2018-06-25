@@ -1,6 +1,7 @@
 library(dplyr)
 library(plotly)
 library(shiny)
+library(shinythemes)
 
 #多选数据
 data <- read.csv("multiplechoices.csv")
@@ -17,11 +18,14 @@ names(data2) <- c("题目", "选项", "答案")
 #判断题
 data3 <- read.csv("judge.csv") %>%
   unique()
+
+#ui
 ui <- navbarPage(
-  headerPanel(h1("复习")),
+  theme = shinytheme("paper"),
+  "燃运运行复习",
   
   #多选
-  tabPanel(h3("多项选择"),
+  tabPanel(h5("多项选择"),
            sidebarLayout(
              sidebarPanel(
                selectInput("multiple", "选一题", choices = data$题目),
@@ -33,7 +37,7 @@ ui <- navbarPage(
            )),
   
   #单选
-  tabPanel(h3("单项选择"),
+  tabPanel(h5("单项选择"),
            sidebarLayout(
              sidebarPanel(
                selectInput("single", "选一题", choices = data2$题目),
@@ -45,7 +49,7 @@ ui <- navbarPage(
            )),
   
   #判断
-  tabPanel(h3("判断"),
+  tabPanel(h5("判断"),
            sidebarLayout(
              sidebarPanel(
                selectInput("judge", "选一题", choices = data3$question),
